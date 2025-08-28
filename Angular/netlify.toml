@@ -2,6 +2,7 @@
   command = "npx ng build --configuration=production"
   publish = "dist/Angular/browser"
 
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -1,0 +1,30 @@
+
+<div class="notas-container">
+  <div class="titulos-centrados">
+    <h1>NOMBRES: {{ nombres() }}</h1>
+    <h1>PROGRAMA: {{ programa() }}</h1>
+    <h1>FICHA: {{ ficha() }}</h1>
+  </div>
+  <h2 class="notas-titulo">Registro de Notas</h2>
+  <label>
+    Nota 1:
+    <input type="text" [ngModel]="nota1()" (ngModelChange)="nota1.set(+($event))" placeholder="Ej: 2.5">
+  </label>
+  <label>
+    Nota 2:
+    <input type="text" [ngModel]="nota2()" (ngModelChange)="nota2.set(+($event))" placeholder="Ej: 3.5">
+  </label>
+  <label>
+    Nota 3:
+    <input type="text" [ngModel]="nota3()" (ngModelChange)="nota3.set(+($event))" placeholder="Ej: 4.7">
+  </label>
+
+  <div class="notas-valores">
+    <p>Nota 1: {{ nota1() }}</p>
+    <p>Nota 2: {{ nota2() }}</p>
+    <p>Nota 3: {{ nota3() }}</p>
+    <p><strong>Promedio: {{ promedio() | number:'1.2-2' }}</strong></p>
+  </div>
+</div>
+
+<router-outlet />
